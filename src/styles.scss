@@ -1,1 +1,234 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Prata&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #5a5a5a;
+  font-size: 14px;
+  line-height: 1.428571429;
+  width: 100%;
+  background-color: #242424 !important;
+
+  &::-webkit-scrollbar-track {
+    background-color: #333;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #333;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.07);
+    background-image: rgba(0, 0, 0, 0.07);
+  }
+
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  blockquote,
+  q {
+    quotes: none;
+  }
+
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+    content: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+    line-height: 1.35;
+    font-family: "Prata", serif;
+  }
+
+  h1 {
+    font-size: 33px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  h5 {
+    font-size: 12px;
+  }
+
+  h6 {
+    font-size: 10.2px;
+  }
+
+  a {
+    color: #5a5a5a;
+    cursor: pointer;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+
+    &:focus,
+    &:active,
+    &:hover {
+      text-decoration: none;
+      color: #a8741a;
+    }
+  }
+
+  legend {
+    font-size: 18px;
+    padding: 7px 0px;
+    color: #fff;
+    border-color: #333;
+  }
+
+  label {
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  select.form-control,
+  textarea.form-control,
+  input[type="text"].form-control,
+  input[type="password"].form-control,
+  input[type="datetime"].form-control,
+  input[type="datetime-local"].form-control,
+  input[type="date"].form-control,
+  input[type="month"].form-control,
+  input[type="time"].form-control,
+  input[type="week"].form-control,
+  input[type="number"].form-control,
+  input[type="email"].form-control,
+  input[type="url"].form-control,
+  input[type="search"].form-control,
+  input[type="tel"].form-control,
+  input[type="color"].form-control {
+    font-size: 12px;
+  }
+  input[type="text"] {
+    min-width: 50px;
+  }
+  .input-group input,
+  .input-group select,
+  .input-group .dropdown-menu,
+  .input-group .popover {
+    font-size: 12px;
+  }
+  .input-group .input-group-addon {
+    font-size: 12px;
+    height: 30px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Fix some bootstrap issues */
+  span.hidden-xs,
+  span.hidden-sm,
+  span.hidden-md,
+  span.hidden-lg {
+    display: inline;
+  }
+  .flip {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: inline-block;
+  }
+
+  div.required .control-label:before {
+    content: "* ";
+    color: #f00;
+    font-weight: bold;
+  }
+
+  /* tooltip */
+  .tooltip.top .tooltip-arrow {
+    border-top-color: #a8741a;
+  }
+
+  .tooltip.top-left .tooltip-arrow {
+    border-top-color: #a8741a;
+  }
+
+  .tooltip.top-right .tooltip-arrow {
+    border-top-color: #a8741a;
+  }
+
+  .tooltip.right .tooltip-arrow {
+    border-right-color: #a8741a;
+  }
+
+  .tooltip.left .tooltip-arrow {
+    border-left-color: #a8741a;
+  }
+
+  .tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #a8741a;
+  }
+
+  .tooltip.bottom-left .tooltip-arrow {
+    border-bottom-color: #a8741a;
+  }
+
+  .tooltip.bottom-right .tooltip-arrow {
+    border-bottom-color: #a8741a;
+  }
+
+  .tooltip-inner {
+    background: #a8741a;
+  }
+
+  .alert {
+    text-align: center;
+    font-size: 13px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+}
+
+*:focus {
+  outline: none !important;
+}

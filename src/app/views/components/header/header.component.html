@@ -1,0 +1,163 @@
+<!-- Top Header -->
+<nav id="top">
+  <div class="container">
+    <div class="container-inner">
+      <div class="follow">
+        <ul class="link-follow">
+          <li
+            class="{{
+              socialNetwork?.name === socialNetworks[0]?.name ? 'first' : ''
+            }}"
+            *ngFor="let socialNetwork of socialNetworks"
+          >
+            <a
+              class="{{ getIcon(socialNetwork?.name) }}"
+              title="{{ socialNetwork?.name }}"
+              href="{{ socialNetwork?.url }}"
+            >
+              <span>{{ socialNetwork?.name }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="box box-left">
+        <li>
+          <p class="header-text">
+            Pide hoy sin temor que en la semana te lo llevamos
+            <span>sin cobros adicionales</span>
+          </p>
+        </li>
+      </ul>
+      <ul class="box box-right">
+        <li class="setting">
+          <div class="btn-group">
+            <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+              <span>Mi cuenta</span>
+              <i class="icon ion-chevron-down"></i>
+            </button>
+            <div class="dropdown-menu" id="top-links">
+              <ul class="ul-account list-unstyled">
+                <li>
+                  <a href="/register" class="a-register-link">Registro</a>
+                </li>
+                <li>
+                  <a href="/login" class="a-register-link">Ingreso</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header>
+  <!-- Header-- -->
+  <div class="header-inner">
+    <div class="container">
+      <div class="container-inner">
+        <div class="logo-container">
+          <div id="logo">
+            <a href="/">
+              <img
+                src="http://demo.towerthemes.com/tt_mirora/image/catalog/logo/logo.png"
+                title="Mirora 1"
+                alt="Mirora 1"
+                class="img-responsive"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="box-cart">
+          <div id="search" class="input-group">
+            <div class="btn-group">
+              <div class="dropdown-toggle search-button" data-toggle="dropdown">
+                <i class="icon ion-ios-search-strong"></i>
+              </div>
+              <div class="dropdown-menu search-content">
+                <input
+                  type="text"
+                  name="search"
+                  value=""
+                  placeholder="Search entire store here ..."
+                  class="form-control input-lg"
+                />
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default btn-lg">
+                    <i class="icon ion-ios-search-strong"></i>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div id="cart" class="btn-group btn-block">
+            <button
+              type="button"
+              data-toggle="dropdown"
+              data-loading-text="Loading..."
+              class="btn dropdown-toggle"
+              aria-expanded="false"
+            >
+              <i class="ion-android-cart"></i><span id="cart-total">0</span
+              ><span class="mycart"
+                ><span>My cart</span><span class="total-price">0.00</span
+                ><i class="ion-chevron-down"></i
+              ></span>
+            </button>
+            <ul class="dropdown-menu pull-right">
+              <li>
+                <p class="text-center cart-empty">
+                  Your shopping cart is empty!
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Menu -->
+  <div class="top-menu fix">
+    <div
+      class="oc-menu horizontal-menu oc-menu-bar visible-lg visible-md"
+      id="oc-menu-6772"
+    >
+      <div class="container">
+        <ul class="ul-top-items" *ngFor="let menu of routesMenu">
+          <li
+            class="li-top-item left {{ isActive(menu.path) }}"
+            style="float: left"
+          >
+            <a href="{{ menu.path }}" class="a-top-link">
+              <span>{{ menu.name }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="oc-menu-674" class="oc-menu mobile-menu hidden-lg hidden-md">
+      <div class="oc-menu-bar" (click)="executeMenu()">
+        <div class="left">
+          <i class="fa fa-bars"></i>
+          <span>Menu</span>
+        </div>
+        <div class="right">
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+      </div>
+      <ul class="ul-top-items" id="dropdown-mobile">
+        <li
+          *ngFor="let menu of routesMenu"
+          class="li-top-item {{ isActive(menu.path) }}"
+        >
+          <a href="{{ menu.path }}" class="a-top-link a-item">
+            <span>{{ menu.name }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

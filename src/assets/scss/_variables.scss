@@ -1,0 +1,11 @@
+@import "./mixins/mixins";
+
+$black-color: #000000 !default;
+$charleston-green: #2d2d2d !default;
+$raisin-black: #242424 !default;
+$white-color: #ffffff !default;
+$bistre-brown: #a8741a !default;
+
+/** Displays */
+$visible: block !default;
+$hidden: none !default;
